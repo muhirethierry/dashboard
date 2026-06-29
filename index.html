@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stats Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-left">
+      <div class="eyebrow">Analytics</div>
+      <h1>Dashboard overview</h1>
+      <p>Stats update every few seconds</p>
+    </div>
+    <div class="header-right">
+      <div class="clock-box">
+        <div class="clock-time" id="clockTime">--:--:--</div>
+        <div class="clock-date" id="clockDate">--- --, ----</div>
+      </div>
+      <div class="live-badge">
+        <div class="live-dot"></div>
+        Live
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="ctrl-btn active" id="btnAuto"     onclick="setAuto(this)">Auto update</button>
+    <button class="ctrl-btn"        id="btnSimulate" onclick="bumpAll()">+ Simulate event</button>
+    <button class="ctrl-btn"        id="btnReset"    onclick="resetAll()">↺ Reset</button>
+  </div>
+
+  <div class="stat-grid" id="statGrid"></div>
+
+  <div class="log-section">
+    <div class="log-title">Recent activity</div>
+    <div class="log-list" id="logList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
